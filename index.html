@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adewaledev - Full Stack Developer</title>
+    <title>Adewaledev Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -42,6 +42,20 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- Profile Picture with Circle Animation -->
+                <div class="profile-section">
+                    <div class="profile-container">
+                        <div class="circle-animation">
+                            <div class="circle circle-1"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-3"></div>
+                        </div>
+                        <div class="profile-image">
+                            <img src="profile.jpg" alt="Adewale Profile Picture" id="profile-pic">
+                        </div>
+                    </div>
+                </div>
+                
                 <h1>Hi, I'm Adewale, a software developer</h1>
                 <div class="typing-animation">
                     <span id="typing-text"></span>
@@ -66,8 +80,25 @@
         </div>
     </section>
 
+    <!-- About Me Section -->
+    <section id="about" class="about-me">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>My name is Adewale Adekoyejo, I’m passionate about tech, my tech journey began after I finished secondary school
+                     where I started to learn basic website design with html, css, bootstrap.
+                
+                then I later evolved and learnt JavaScript with a bit of react to complete my frontend development journey,
+                     I wanted to stand out among developers as their a lot of developers out there.
+                
+                so I decided to Learn backend development at a tech firm which I learnt php and MySQL for server side,
+                     I graduated with a full stack web developer certificate and now I currently have a 3 yrs experience in tech.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Tech Stack Section -->
-    <section id="about" class="tech-stack">
+    <section class="tech-stack">
         <div class="container">
             <h2>My Tech Stack</h2>
             <div class="tech-categories">
@@ -118,75 +149,44 @@
     <section id="projects" class="featured-projects">
         <div class="container">
             <h2>A selection of my recent work across web applications</h2>
-            <div class="featured-grid">
-                <div class="featured-project">
-                    <div class="project-image">
-                        <img src="img/4 (2).jpg" alt="E-commerce Platform">
-                    </div>
-                    <div class="project-info">
-                        <h3>E-commerce Platform</h3>
-                        <p>Full-stack e-commerce solution with React frontend and PHP backend, featuring secure payments and inventory management.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured-project">
-                    <div class="project-image">
-                        <img src="img/1 (3).jpg" alt="Task Management App">
-                    </div>
-                    <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>Collaborative task management application with real-time updates, user authentication, and project tracking.</p>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-
     <!-- Other Projects Grid -->
     <section class="other-projects">
         <div class="container">
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-thumbnail">
-                        <img src="img/1 (1).jpg" alt="Portfolio Website">
+                        <img src="moviereview.jpg" alt="Movie Review Website">
                     </div>
-                    <h4>Portfolio Website</h4>
+                    <h4>Movies review website</h4>
                     <button class="view-details-btn">
                         View details <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
                 <div class="project-card">
                     <div class="project-thumbnail">
-                        <img src="img/1 (2).jpg" alt="Weather App">
+                        <img src="2.jpg" alt="Food E-commerce Website">
+                    </div>
+                    <h4>Food Ordering Website</h4>
+                    <button class="view-details-btn">
+                        View details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="4.jpg" alt="Product Review Card">
+                    </div>
+                    <h4>TTEC Cooperate</h4>
+                    <button class="view-details-btn">
+                        View details <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="weather.jpg" alt="Weather App">
                     </div>
                     <h4>Weather App</h4>
-                    <button class="view-details-btn">
-                        View details <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="img/1 (3).jpg" alt="Blog Platform">
-                    </div>
-                    <h4>Blog Platform</h4>
-                    <button class="view-details-btn">
-                        View details <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-                <div class="project-card">
-                    <div class="project-thumbnail">
-                        <img src="img/4 (1).jpg" alt="Restaurant Website">
-                    </div>
-                    <h4>Restaurant Website</h4>
                     <button class="view-details-btn">
                         View details <i class="fas fa-arrow-right"></i>
                     </button>
@@ -204,8 +204,8 @@
                     <div class="testimonial-content">
                         <p>"Adewale delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and technical expertise made the entire process smooth and efficient."</p>
                         <div class="client-info">
-                            <h4>Sarah Johnson</h4>
-                            <span>CEO, TechStore</span>
+                            <h4>Oyeyemi</h4>
+                            <span>CEO, Oyesdelight</span>
                         </div>
                     </div>
                 </div>
@@ -278,7 +278,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to bring your ideas to life?</h2>
-                <a href="mailto:adewaledev@gmail.com" class="cta-button">
+                <a href="mailto:adekoyejoadewale@icloud.com" class="cta-button">
                     Let's Work Together
                 </a>
             </div>
@@ -304,15 +304,16 @@
                 </div>
                 <div class="footer-social">
                     <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/adewale-adekoyejo-34948a365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/09067034513" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/im__adewale?igsh=ZHdiNGIzM2o1aWcz&utm_source=qr" aria-label="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="get-in-touch">
                     <h4>Get in Touch</h4>
-                    <a href="mailto:adewaledev@gmail.com">adewaledev@gmail.com</a>
+                    <a href="mailto:adekoyejoadewale@icloud.com">adekoyejoadewale@icloud.com</a>
                 </div>
                 <div class="footer-copyright">
                     <p>&copy;2025 Adewaledev. All rights reserved.</p>
