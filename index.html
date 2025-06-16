@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adewaledev Full Stack Developer</title>
+    <title>Adewale Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -12,7 +12,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h2>Adewaledev</h2>
+                <h2>Adewale</h2>
             </div>
             <nav class="nav">
                 <ul>
@@ -47,8 +47,6 @@
                     <div class="profile-container">
                         <div class="circle-animation">
                             <div class="circle circle-1"></div>
-                            <div class="circle circle-2"></div>
-                            <div class="circle circle-3"></div>
                         </div>
                         <div class="profile-image">
                             <img src="profile.jpg" alt="Adewale Profile Picture" id="profile-pic">
@@ -69,7 +67,7 @@
     <section class="cta-explore">
         <div class="container">
             <div class="cta-content">
-               <a href="#" id="download-cv" class="cv-download-btn">
+               <a href="cv.pdf" id="download-cv" class="cv-download-btn" download>
                    <i class="fas fa-download"></i>
                    <span>Download my CV</span>
                </a>
@@ -85,14 +83,14 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>My name is Adewale Adekoyejo, I’m passionate about tech, my tech journey began after I finished secondary school
+                <p>My name is Adewale Adekoyejo, I'm passionate about tech, my tech journey began after I finished secondary school
                      where I started to learn basic website design with html, css, bootstrap.
                 
                 then I later evolved and learnt JavaScript with a bit of react to complete my frontend development journey,
                      I wanted to stand out among developers as their a lot of developers out there.
                 
                 so I decided to Learn backend development at a tech firm which I learnt php and MySQL for server side,
-                     I graduated with a full stack web developer certificate and now I currently have a 3 yrs experience in tech.</p>
+                     I graduated with a full stack web developer certificate and now I currently have a 3 yrs experience in tech.</p>
             </div>
         </div>
     </section>
@@ -278,20 +276,55 @@
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to bring your ideas to life?</h2>
-                <a href="mailto:adekoyejoadewale@icloud.com" class="cta-button">
-                    Let's Work Together
-                </a>
             </div>
         </div>
     </section>
 
+     <!-- Contact Section -->
+     <div class="contact-form-container">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzzgglnd" method="POST">
+            <h3>Send me a message</h3>
+            
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+        
+        <!-- Form Status Messages -->
+        <div id="form-status" class="form-status"></div>
+    </div>
+</div>
+</div>
+</section>
+
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
                     <h3>Adewaledev</h3>
-                    <p>Full Stack Web appliction Developer focused on creating elegant, efficient, and user-centered digital experiences.</p>
+                    <p>Full Stack Web application Developer focused on creating elegant, efficient, and user-centered digital experiences.</p>
                 </div>
                 <div class="footer-nav">
                     <ul>

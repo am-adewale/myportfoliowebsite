@@ -78,71 +78,12 @@ document.querySelectorAll('.nav a').forEach(link => {
     });
 });
 
-// CV Download Functionality
-downloadCvBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    
-    // Create a sample CV content (in a real scenario, you'd have an actual PDF file)
-    const cvData = generateCVContent();
-    
-    // Create blob and download
-    const blob = new Blob([cvData], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.style.display = 'none';
-    a.href = url;
-    a.download = 'Adewale_CV.txt';
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
-    document.body.removeChild(a);
-    
-    // Show download notification
-    showNotification('CV downloaded successfully!');
-});
-
-
-// Show notification function
-function showNotification(message) {
-    const notification = document.createElement('div');
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background-color: var(--accent-color);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 5px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        z-index: 10000;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: all 0.3s ease;
-    `;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.opacity = '1';
-        notification.style.transform = 'translateY(0)';
-    }, 100);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        notification.style.transform = 'translateY(-20px)';
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 3000);
-}
-
 // Typing Animation
 const phrases = [
     "I build web applications",
     "I build digital experiences",
     "I create modern solutions",
+    "Critical Thinking",
     "I develop user-friendly interfaces"
 ];
 
@@ -496,13 +437,6 @@ function init() {
     // Start typing animation after a delay
     setTimeout(typeAnimation, 1500);
     
-    // Initialize scroll-based features
-    const debouncedScrollHandler = debounce(() => {
-        handleHeaderScroll();
-    }, 10);
-    
-    window.addEventListener('scroll', debouncedScrollHandler);
-    
     // Initialize animations and interactions
     initScrollAnimations();
     initProjectCards();
@@ -555,3 +489,60 @@ window.addEventListener('error', (e) => {
         console.log('Image failed to load:', e.target.src);
     }
 });
+
+// Contact Form Submission
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const originalBtnText = btnText.textContent;
+        
+        // Show loading state
+        btnText.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Success message
+                formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+                formStatus.className = 'form-status success';
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Error message
+            formStatus.textContent = 'Oops! There was a problem sending your message. Please try again later.';
+            formStatus.className = 'form-status error';
+            console.error('Form submission error:', error);
+        } finally {
+            // Reset button state
+            btnText.textContent = originalBtnText;
+            submitBtn.disabled = false;
+            
+            // Hide status message after 5 seconds
+            setTimeout(() => {
+                formStatus.style.opacity = '0';
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                    formStatus.style.opacity = '1';
+                }, 300);
+            }, 5000);
+        }
+    });
+}
+
