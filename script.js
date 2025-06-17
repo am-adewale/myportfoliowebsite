@@ -452,6 +452,7 @@ const projects = [
           document.body.classList.add('loaded');
       });
   }
+
   
   // Debounce function for performance optimization
   function debounce(func, wait) {
