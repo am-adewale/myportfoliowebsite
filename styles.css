@@ -317,7 +317,7 @@ body {
 
 /* CTA Explore Section */
 .cta-explore {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background-color: var(--secondary-bg);
 }
 
@@ -367,7 +367,7 @@ body {
 
 /* About Me Section */
 .about-me {
-    padding: 5rem 0;
+    padding: 3rem 0;
     background-color: var(--primary-bg);
 }
 
@@ -978,6 +978,24 @@ body {
     .profile-image {
         width: 130px;
         height: 130px;
+    }
+    
+    .cta-explore {
+        padding: 1.5rem 0;
+    }
+    
+    .about-me {
+        padding: 2rem 0;
+    }
+    
+    .profile-section {
+        margin-bottom: 2rem;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding-top: 60px;
+        padding-bottom: 2rem;
     }
 }
 
