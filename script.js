@@ -11,10 +11,10 @@ const projects = [
     {
       id: 2,
       title: "Food Ecommerce Website",
-      description: "OYESDELIGHT Food ordering website that allows users to browse menus, select meals, and place orders from oyesdelight a local resturant. This site is designed to provide seamless, user-friendly experiences that mimics ordering food in person but with convienience of doing it online.",
-      link: "https://am-adewale.github.io/oyesdelight/",
-      image: "2.jpg",
-      technologies: ["HTML5", "CSS3", "Javascript", "PHP", "MSQL"]
+      description: "Crave Food ordering website that allows users to browse menus, select meals, and place orders from crave a local resturant. This site is designed to provide seamless, user-friendly experiences that mimics ordering food in person but with convienience of doing it online.",
+      link: "https://crave-delta.vercel.app//",
+      image: "crave.png",
+      technologies: ["HTML5", "CSS3", "Javascript", "Superbase", "SQL"]
     },
     {
       id: 3,
